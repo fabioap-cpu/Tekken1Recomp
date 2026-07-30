@@ -4,7 +4,7 @@
 
 Built on [PSXRecomp](https://github.com/mstan/psxrecomp) — a MIPS R3000A → C → native x64 static recompilation framework. The game executable is recompiled to produce a single binary that runs without an emulator, delivering perfect native performance.
 
-> ⚠️ **Engine Enhancement:** This repository features a custom-built CDDA engine patch explicitly engineered to solve the severe CD audio stuttering bugs that naturally occur when recompiling *Tekken 1*.
+> ⚠️ **Engine Enhancement:** This repository features a custom-built CDDA engine patch explicitly engineered to solve the severe CD audio stuttering bugs that occur during gameplay and the main menu, where the music would start repeating for seconds.
 
 ---
 
@@ -46,7 +46,7 @@ Grab the release archive from [Releases](https://github.com/fabioap-cpu/Tekken1R
 
 ### 2. The CDDA "Spam" Fix (Technical Details)
 
-During the porting process, a critical issue was discovered where the game would infinitely "stutter" or repeat the first millisecond of music during pause menus or transitions. 
+A critical issue was discovered where the game would repeatedly stutter or loop the music for seconds during gameplay and the main menu. 
 
 **The Cause:** The original Tekken 1 code constantly spams the `Play` command (`0x03`) to the CD-ROM drive while waiting in specific loops. Real hardware simply ignores the redundant command if the disc is already playing. However, the standard software recompiler obeys it blindly, constantly rewinding the audio track to the start position.
 
@@ -80,6 +80,12 @@ We have also improved how the executable reports its performance metrics (`main.
 
 ---
 
+## Community Contributions
+Any community fix or pull request is welcome! The idea is to further improve the engine code, making all games more compatible and accurate. Feel free to contribute and help expand the scope of native PlayStation recompilation.
+
+---
+
 ## Credits
 * **Port / Configuration / Engine Fixes:** [fabioap-cpu](https://github.com/fabioap-cpu)
 * **Base Recompiler Technology:** [psxrecomp](https://github.com/mstan/psxrecomp) by mstan
+ 

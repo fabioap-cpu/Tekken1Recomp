@@ -2857,3 +2857,4 @@ void debug_force_cd_reinsert(void) {
     // Forzamos la ejecución de cualquier comando atascado en cola
     try_execute_queued_command();
 }
+ 
