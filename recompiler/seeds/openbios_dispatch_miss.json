@@ -1,0 +1,32 @@
+{
+  "schema": "psxrecomp phase2 seeds",
+  "source": "empirical dispatch-miss loop for the OpenBIOS profile - addresses observed as FAIL-FAST unknown dispatch at runtime, merged by gen_bios_seeds_from_elf.py --extra. Same loop as SCPH1001's dispatch_miss_seeds.json.",
+  "seed_count": 5,
+  "seeds": [
+    {
+      "address": "0xBFC0B410",
+      "label": "miss_BFC0B410",
+      "rationale": "empirical FAIL-FAST unknown dispatch during OpenBIOS bring-up boot loop"
+    },
+    {
+      "address": "0xBFC0D08C",
+      "label": "miss_BFC0D08C",
+      "rationale": "empirical FAIL-FAST unknown dispatch during OpenBIOS bring-up boot loop"
+    },
+    {
+      "address": "0xBFC0D070",
+      "label": "miss_BFC0D070",
+      "rationale": "empirical FAIL-FAST unknown dispatch during OpenBIOS bring-up boot loop"
+    },
+    {
+      "address": "0xBFC0B3E0",
+      "label": "miss_BFC0B3E0",
+      "rationale": "empirical FAIL-FAST unknown dispatch during OpenBIOS bring-up boot loop"
+    },
+    {
+      "address": "0xBFC0B39C",
+      "label": "miss_BFC0B39C",
+      "rationale": "empirical FAIL-FAST unknown dispatch during OpenBIOS bring-up boot loop"
+    }
+  ]
+}
